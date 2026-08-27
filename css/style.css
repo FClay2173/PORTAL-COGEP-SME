@@ -52,6 +52,7 @@ body {
 
 /* =========================
    BANNER COGEP
+   IMAGEM SEM CORTE NO TOPO
 ========================= */
 
 .banner-cogep {
@@ -72,9 +73,11 @@ body {
     width: 100%;
     height: auto;
 
-    max-height: 520px;
+    max-height: none;
 
-    object-fit: cover;
+    object-fit: contain;
+
+    object-position: center top;
 
     margin: 0;
     padding: 0;
@@ -566,6 +569,8 @@ footer {
         max-height: none;
 
         object-fit: contain;
+
+        object-position: center top;
     }
 
     .restricted-area-container {
@@ -619,8 +624,13 @@ footer {
     .banner-cogep img {
         width: 100%;
 
-        max-height: 600px;
+        height: auto;
 
-        object-fit: cover;
+        max-height: none;
+
+        object-fit: contain;
+
+        object-position: center top;
     }
+
 }
