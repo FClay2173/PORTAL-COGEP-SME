@@ -1,12 +1,13 @@
 :root {
-    --primary-color: #F58220;
-    --secondary-color: #2E7D32;
+    --primary-color: #ff7a00;
+    --secondary-color: #008b83;
     --bg-color: #f5f7fa;
     --card-bg: #ffffff;
     --text-color: #333333;
     --border-radius: 10px;
     --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
 
 /* =========================
    CONFIGURAÇÕES GERAIS
@@ -27,10 +28,13 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+
     display: flex;
     flex-direction: column;
+
     min-height: 100vh;
 }
+
 
 /* =========================
    CONTAINER
@@ -43,30 +47,39 @@ body {
     padding: 20px;
 }
 
+
 /* =========================
    BANNER COGEP
-   ALTURA REDUZIDA SEM CORTAR O TOPO
+   IMAGEM COMPLETA - SEM CORTE
 ========================= */
 
 .banner-cogep {
     width: 100%;
-    height: 360px;
     margin: 0;
     padding: 0;
+
     background-color: #ffffff;
+
     overflow: hidden;
+
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .banner-cogep img {
     display: block;
+
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    height: 400px;
+
+    object-fit: contain;
+    object-position: center center;
+
     margin: 0;
     padding: 0;
+
+    background-color: #ffffff;
 }
+
 
 /* =========================
    ÁREA RESTRITA
@@ -74,27 +87,40 @@ body {
 
 .restricted-area-container {
     text-align: right;
-    margin: 15px 0 10px;
+
+    margin: 15px 0 12px;
 }
 
 .btn-restricted {
     display: inline-flex;
+
     align-items: center;
+
     gap: 8px;
+
     background-color: var(--primary-color);
+
     color: white;
+
     padding: 9px 18px;
+
     border-radius: 20px;
+
     text-decoration: none;
+
     font-weight: 600;
+
     font-size: 0.9rem;
+
     transition: all 0.3s ease;
 }
 
 .btn-restricted:hover {
-    background-color: #d96d10;
+    background-color: #e56700;
+
     transform: translateY(-2px);
 }
+
 
 /* =========================
    SETORES
@@ -102,49 +128,76 @@ body {
 
 .grid-setores {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 20px;
+
     margin: 15px 0 35px;
 }
 
 .card-setor {
     background: var(--card-bg);
+
     border-radius: var(--border-radius);
+
     padding: 25px 15px;
+
     text-align: center;
+
     box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
     cursor: pointer;
+
     text-decoration: none;
+
     color: var(--text-color);
+
     border-top: 4px solid var(--primary-color);
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 }
 
 .card-setor:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .card-icon {
     font-size: 2.5rem;
+
     color: var(--primary-color);
+
     margin-bottom: 15px;
 }
 
 .card-title {
     font-weight: 700;
+
     font-size: 1.1rem;
+
     margin-bottom: 5px;
-    color: var(--secondary-color);
+
+    color: #007a45;
 }
 
 .card-desc {
     font-size: 0.85rem;
+
     color: #666;
 }
+
 
 /* =========================
    CEBDEC
@@ -152,70 +205,101 @@ body {
 
 .cebdec-header {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 20px;
+
     padding-bottom: 15px;
-    border-bottom: 2px solid var(--primary-color);
+
+    border-bottom: 1px solid #dee2e6;
 }
 
 .cebdec-header h2 {
     color: var(--secondary-color);
+
     font-size: 1.5rem;
+
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 }
 
 .btn-voltar {
     background-color: var(--secondary-color);
+
     color: white;
+
     padding: 8px 16px;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     font-weight: 500;
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 8px;
-    transition: background 0.3s ease;
+
+    transition:
+        background 0.3s ease;
 }
 
 .btn-voltar:hover {
-    background-color: #245f27;
+    background-color: var(--primary-color);
 }
-
-/* =========================
-   SUBSETORES
-========================= */
 
 .subsetores-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(240px, 1fr));
+
     gap: 15px;
 }
 
 .btn-subsetor {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
-    background-color: #f8f8f8;
+
+    background-color: #f1f3f5;
+
     padding: 15px 20px;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     color: #333;
+
     font-weight: 500;
-    border: 1px solid #e2e2e2;
+
+    border: 1px solid #dee2e6;
+
     transition: all 0.2s ease;
 }
 
 .btn-subsetor:hover {
     background-color: var(--primary-color);
+
     color: white;
+
     border-color: var(--primary-color);
 }
 
 .btn-subsetor i {
     color: var(--primary-color);
+
     font-size: 1.2rem;
 }
 
@@ -223,41 +307,57 @@ body {
     color: white;
 }
 
+
 /* =========================
    CALCULADORAS
 ========================= */
 
 .calculadoras-section {
     background: var(--card-bg);
+
     border-radius: var(--border-radius);
+
     padding: 30px;
+
     margin: 30px 0 40px;
+
     box-shadow: var(--box-shadow);
+
     border-top: 5px solid var(--primary-color);
 }
 
 .calculadoras-section h2 {
     text-align: center;
+
     color: var(--secondary-color);
+
     margin-bottom: 25px;
 }
 
 .calculadoras-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
     gap: 30px;
 }
 
 .calc-card {
-    background-color: #f8f8f8;
+    background-color: #f1f3f5;
+
     padding: 20px;
+
     border-radius: var(--border-radius);
-    border: 1px solid #e2e2e2;
+
+    border: 1px solid #dee2e6;
 }
 
 .calc-card h3 {
     color: var(--primary-color);
+
     margin-bottom: 15px;
+
     font-size: 1.1rem;
 }
 
@@ -267,45 +367,67 @@ body {
 
 .form-group label {
     display: block;
+
     margin-bottom: 5px;
+
     font-weight: 500;
+
     font-size: 0.9rem;
 }
 
 .form-group input {
     width: 100%;
+
     padding: 10px;
+
     border: 1px solid #ccc;
+
     border-radius: 4px;
+
     font-size: 1rem;
 }
 
 .btn-calc {
     width: 100%;
+
     background-color: var(--primary-color);
+
     color: white;
+
     border: none;
+
     padding: 10px;
+
     border-radius: 4px;
+
     font-weight: bold;
+
     cursor: pointer;
-    transition: background 0.3s ease;
+
+    transition:
+        background 0.3s ease;
 }
 
 .btn-calc:hover {
-    background-color: #d96d10;
+    background-color: var(--secondary-color);
 }
 
 .resultado-box {
     margin-top: 15px;
+
     padding: 12px;
-    background-color: #f1f1f1;
+
+    background-color: #e2e3e5;
+
     border-radius: 4px;
+
     text-align: center;
+
     font-weight: bold;
+
     color: #383d41;
-    border-left: 4px solid var(--secondary-color);
 }
+
 
 /* =========================
    INFORMAÇÕES DE CONTATO
@@ -313,10 +435,15 @@ body {
 
 .info-contato {
     background-color: var(--secondary-color);
+
     color: white;
+
     padding: 25px 0;
+
     text-align: center;
+
     font-size: 0.95rem;
+
     margin-top: auto;
 }
 
@@ -326,25 +453,34 @@ body {
 
 .info-contato i {
     margin-right: 7px;
+
     color: var(--primary-color);
 }
+
 
 /* =========================
    RODAPÉ
 ========================= */
 
 footer {
-    background-color: #222;
+    background-color: #111;
+
     color: #aaa;
+
     text-align: center;
+
     font-size: 0.85rem;
 }
 
 .footer-creditos {
-    background-color: #222;
+    background-color: #111827;
+
     color: #cbd5e1;
+
     text-align: center;
+
     padding: 20px 10px;
+
     border-top: 3px solid var(--primary-color);
 }
 
@@ -354,12 +490,14 @@ footer {
 
 .footer-content .dev-by {
     font-size: 13px;
-    color: #aaa;
+
+    color: #94a3b8;
 }
 
 .footer-content .dev-by strong {
     color: var(--primary-color);
 }
+
 
 /* =========================
    NAVEGAÇÃO
@@ -367,27 +505,41 @@ footer {
 
 .nav-container {
     padding: 12px 20px;
+
     background-color: #f8f9fa;
+
     border-bottom: 1px solid #e9ecef;
 }
 
 .btn-inicio {
     display: inline-flex;
+
     align-items: center;
+
     gap: 8px;
+
     padding: 8px 16px;
+
     background-color: var(--primary-color);
+
     color: #ffffff !important;
+
     text-decoration: none;
+
     border-radius: 6px;
+
     font-weight: bold;
+
     font-size: 14px;
-    transition: background-color 0.2s ease;
+
+    transition:
+        background-color 0.2s ease;
 }
 
 .btn-inicio:hover {
-    background-color: #d96d10;
+    background-color: #e56700;
 }
+
 
 /* =========================
    RESPONSIVIDADE
@@ -397,18 +549,18 @@ footer {
 
     .container {
         width: 94%;
-        padding: 15px;
-    }
 
-    .banner-cogep {
-        height: 220px;
+        padding: 15px;
     }
 
     .banner-cogep img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
+
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
     }
 
     .restricted-area-container {
@@ -417,11 +569,13 @@ footer {
 
     .btn-restricted {
         font-size: 0.82rem;
+
         padding: 8px 14px;
     }
 
     .grid-setores {
         grid-template-columns: 1fr;
+
         gap: 15px;
     }
 
@@ -431,20 +585,25 @@ footer {
 
     .calculadoras-grid {
         grid-template-columns: 1fr;
+
         gap: 20px;
     }
 
     .info-contato {
         font-size: 0.85rem;
+
         padding: 20px 10px;
     }
 
     .cebdec-header {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 15px;
     }
 }
+
 
 /* =========================
    TELAS GRANDES
@@ -452,14 +611,15 @@ footer {
 
 @media (min-width: 1600px) {
 
-    .banner-cogep {
-        height: 400px;
-    }
-
     .banner-cogep img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
+
+        height: 400px;
+
+        max-height: 400px;
+
+        object-fit: contain;
+
+        object-position: center center;
     }
 }
