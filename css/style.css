@@ -1,6 +1,7 @@
 :root {
     --primary-color: #ff7a00;
     --secondary-color: #008b83;
+    --green-color: #007a45;
     --bg-color: #f5f7fa;
     --card-bg: #ffffff;
     --text-color: #333333;
@@ -41,16 +42,15 @@ body {
 ========================= */
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 94%;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
 }
 
 
 /* =========================
    BANNER COGEP
-   IMAGEM COMPLETA - SEM CORTE
 ========================= */
 
 .banner-cogep {
@@ -69,7 +69,12 @@ body {
     display: block;
 
     width: 100%;
-    height: 400px;
+
+    /*
+       Aumentamos o espaço do banner,
+       mas sem cortar a imagem.
+    */
+    height: 470px;
 
     object-fit: contain;
     object-position: center center;
@@ -88,7 +93,7 @@ body {
 .restricted-area-container {
     text-align: right;
 
-    margin: 15px 0 12px;
+    margin: 8px 0 10px;
 }
 
 .btn-restricted {
@@ -102,7 +107,7 @@ body {
 
     color: white;
 
-    padding: 9px 18px;
+    padding: 8px 17px;
 
     border-radius: 20px;
 
@@ -110,7 +115,7 @@ body {
 
     font-weight: 600;
 
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 
     transition: all 0.3s ease;
 }
@@ -127,22 +132,33 @@ body {
 ========================= */
 
 .grid-setores {
+
     display: grid;
 
+    /*
+       5 cards na mesma linha
+    */
     grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
+        repeat(5, 1fr);
 
-    gap: 20px;
+    gap: 18px;
 
-    margin: 15px 0 35px;
+    margin: 10px 0 30px;
 }
 
+
 .card-setor {
+
     background: var(--card-bg);
 
     border-radius: var(--border-radius);
 
-    padding: 25px 15px;
+    /*
+       Cards menores
+    */
+    padding: 18px 10px;
+
+    min-height: 150px;
 
     text-align: center;
 
@@ -165,37 +181,49 @@ body {
     flex-direction: column;
 
     align-items: center;
+
+    justify-content: center;
 }
 
+
 .card-setor:hover {
-    transform: translateY(-5px);
+
+    transform: translateY(-4px);
 
     box-shadow:
         0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
+
 .card-icon {
-    font-size: 2.5rem;
+
+    font-size: 2rem;
 
     color: var(--primary-color);
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
+
 
 .card-title {
+
     font-weight: 700;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
 
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 
-    color: #007a45;
+    color: var(--green-color);
 }
 
+
 .card-desc {
-    font-size: 0.85rem;
+
+    font-size: 0.78rem;
 
     color: #666;
+
+    line-height: 1.4;
 }
 
 
@@ -204,6 +232,7 @@ body {
 ========================= */
 
 .cebdec-header {
+
     display: flex;
 
     justify-content: space-between;
@@ -217,7 +246,9 @@ body {
     border-bottom: 1px solid #dee2e6;
 }
 
+
 .cebdec-header h2 {
+
     color: var(--secondary-color);
 
     font-size: 1.5rem;
@@ -229,7 +260,9 @@ body {
     gap: 10px;
 }
 
+
 .btn-voltar {
+
     background-color: var(--secondary-color);
 
     color: white;
@@ -252,11 +285,15 @@ body {
         background 0.3s ease;
 }
 
+
 .btn-voltar:hover {
+
     background-color: var(--primary-color);
 }
 
+
 .subsetores-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -265,7 +302,9 @@ body {
     gap: 15px;
 }
 
+
 .btn-subsetor {
+
     display: flex;
 
     align-items: center;
@@ -289,7 +328,9 @@ body {
     transition: all 0.2s ease;
 }
 
+
 .btn-subsetor:hover {
+
     background-color: var(--primary-color);
 
     color: white;
@@ -297,13 +338,17 @@ body {
     border-color: var(--primary-color);
 }
 
+
 .btn-subsetor i {
+
     color: var(--primary-color);
 
     font-size: 1.2rem;
 }
 
+
 .btn-subsetor:hover i {
+
     color: white;
 }
 
@@ -313,6 +358,7 @@ body {
 ========================= */
 
 .calculadoras-section {
+
     background: var(--card-bg);
 
     border-radius: var(--border-radius);
@@ -326,7 +372,9 @@ body {
     border-top: 5px solid var(--primary-color);
 }
 
+
 .calculadoras-section h2 {
+
     text-align: center;
 
     color: var(--secondary-color);
@@ -334,7 +382,9 @@ body {
     margin-bottom: 25px;
 }
 
+
 .calculadoras-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -343,7 +393,9 @@ body {
     gap: 30px;
 }
 
+
 .calc-card {
+
     background-color: #f1f3f5;
 
     padding: 20px;
@@ -353,7 +405,9 @@ body {
     border: 1px solid #dee2e6;
 }
 
+
 .calc-card h3 {
+
     color: var(--primary-color);
 
     margin-bottom: 15px;
@@ -361,11 +415,15 @@ body {
     font-size: 1.1rem;
 }
 
+
 .form-group {
+
     margin-bottom: 15px;
 }
 
+
 .form-group label {
+
     display: block;
 
     margin-bottom: 5px;
@@ -375,7 +433,9 @@ body {
     font-size: 0.9rem;
 }
 
+
 .form-group input {
+
     width: 100%;
 
     padding: 10px;
@@ -387,7 +447,9 @@ body {
     font-size: 1rem;
 }
 
+
 .btn-calc {
+
     width: 100%;
 
     background-color: var(--primary-color);
@@ -408,11 +470,15 @@ body {
         background 0.3s ease;
 }
 
+
 .btn-calc:hover {
+
     background-color: var(--secondary-color);
 }
 
+
 .resultado-box {
+
     margin-top: 15px;
 
     padding: 12px;
@@ -434,6 +500,7 @@ body {
 ========================= */
 
 .info-contato {
+
     background-color: var(--secondary-color);
 
     color: white;
@@ -447,11 +514,15 @@ body {
     margin-top: auto;
 }
 
+
 .info-contato p {
+
     margin: 5px 0;
 }
 
+
 .info-contato i {
+
     margin-right: 7px;
 
     color: var(--primary-color);
@@ -463,6 +534,7 @@ body {
 ========================= */
 
 footer {
+
     background-color: #111;
 
     color: #aaa;
@@ -472,7 +544,9 @@ footer {
     font-size: 0.85rem;
 }
 
+
 .footer-creditos {
+
     background-color: #111827;
 
     color: #cbd5e1;
@@ -484,17 +558,23 @@ footer {
     border-top: 3px solid var(--primary-color);
 }
 
+
 .footer-content p {
+
     margin: 4px 0;
 }
 
+
 .footer-content .dev-by {
+
     font-size: 13px;
 
     color: #94a3b8;
 }
 
+
 .footer-content .dev-by strong {
+
     color: var(--primary-color);
 }
 
@@ -504,6 +584,7 @@ footer {
 ========================= */
 
 .nav-container {
+
     padding: 12px 20px;
 
     background-color: #f8f9fa;
@@ -511,7 +592,9 @@ footer {
     border-bottom: 1px solid #e9ecef;
 }
 
+
 .btn-inicio {
+
     display: inline-flex;
 
     align-items: center;
@@ -536,7 +619,9 @@ footer {
         background-color 0.2s ease;
 }
 
+
 .btn-inicio:hover {
+
     background-color: #e56700;
 }
 
@@ -545,62 +630,139 @@ footer {
    RESPONSIVIDADE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
 
-    .container {
-        width: 94%;
+    .grid-setores {
 
-        padding: 15px;
+        grid-template-columns:
+            repeat(3, 1fr);
     }
 
     .banner-cogep img {
+
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+
+        width: 94%;
+
+        padding: 12px;
+    }
+
+
+    .banner-cogep img {
+
         width: 100%;
 
         height: auto;
 
-        max-height: none;
-
         object-fit: contain;
     }
 
+
     .restricted-area-container {
+
         text-align: center;
+
+        margin: 10px 0;
     }
 
+
     .btn-restricted {
+
         font-size: 0.82rem;
 
         padding: 8px 14px;
     }
 
-    .grid-setores {
-        grid-template-columns: 1fr;
 
-        gap: 15px;
+    .grid-setores {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
     }
 
+
+    .card-setor {
+
+        min-height: 140px;
+
+        padding: 18px 8px;
+    }
+
+
+    .card-icon {
+
+        font-size: 1.8rem;
+    }
+
+
+    .card-title {
+
+        font-size: 0.95rem;
+    }
+
+
+    .card-desc {
+
+        font-size: 0.75rem;
+    }
+
+
     .calculadoras-section {
+
         padding: 20px 15px;
     }
 
+
     .calculadoras-grid {
+
         grid-template-columns: 1fr;
 
         gap: 20px;
     }
 
+
     .info-contato {
+
         font-size: 0.85rem;
 
         padding: 20px 10px;
     }
 
+
     .cebdec-header {
+
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 15px;
+    }
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 480px) {
+
+    .grid-setores {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .card-setor {
+
+        min-height: 120px;
     }
 }
 
@@ -612,14 +774,25 @@ footer {
 @media (min-width: 1600px) {
 
     .banner-cogep img {
+
         width: 100%;
 
-        height: 400px;
-
-        max-height: 400px;
+        height: 500px;
 
         object-fit: contain;
 
         object-position: center center;
+    }
+
+
+    .grid-setores {
+
+        gap: 20px;
+    }
+
+
+    .card-setor {
+
+        min-height: 155px;
     }
 }
