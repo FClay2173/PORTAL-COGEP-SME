@@ -53,40 +53,69 @@ body {
    BANNER COGEP
 ========================= */
 
+/*
+   Estrutura visual:
+
+   BRANCO | LARANJA | BANNER | LARANJA | BRANCO
+
+   O branco ocupa as extremidades.
+   O laranja aparece apenas como detalhe.
+*/
+
 .banner-cogep {
     width: 100%;
-    margin: 0;
-    padding: 0 22px;
 
-    background-color: #ff7900;
+    margin: 0;
+
+    padding: 0 55px;
+
+    background-color: #ffffff;
 
     overflow: hidden;
 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 
     display: flex;
+
     justify-content: center;
+
+    align-items: center;
 }
 
 
 /*
-   A imagem ocupa praticamente toda a largura,
-   mas deixamos pequenas faixas laranjas
-   nas duas laterais.
+   Imagem do banner.
+   Não usamos "cover", para evitar
+   cortes na parte superior.
 */
 
 .banner-cogep img {
     display: block;
 
     width: 100%;
+
+    max-width: 1350px;
+
     height: auto;
 
-    max-height: 520px;
+    max-height: 560px;
 
     object-fit: contain;
 
-    margin: 0;
-    padding: 0;
+    object-position: center center;
+
+    /*
+       Pequena faixa laranja
+       junto à imagem.
+    */
+
+    background-color: #ff7900;
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+    margin: 0 auto;
 }
 
 
@@ -99,6 +128,7 @@ body {
 
     margin: 25px 0 18px;
 }
+
 
 .btn-restricted {
     display: inline-flex;
@@ -124,6 +154,7 @@ body {
     transition: all 0.3s ease;
 }
 
+
 .btn-restricted:hover {
     background-color: #e56700;
 
@@ -140,8 +171,8 @@ body {
     display: grid;
 
     /*
-       5 cartões em uma única linha
-       em telas grandes.
+       Cinco quadrantes
+       na mesma linha.
     */
 
     grid-template-columns:
@@ -150,8 +181,8 @@ body {
     gap: 18px;
 
     /*
-       Desce um pouco os quadrantes
-       em relação ao banner.
+       Espaço entre o banner
+       e os quadrantes.
     */
 
     margin: 35px 0 45px;
@@ -169,7 +200,7 @@ body {
     border-radius: var(--border-radius);
 
     /*
-       Cartões um pouco menores.
+       Quadrantes menores.
     */
 
     padding: 20px 12px;
@@ -190,10 +221,6 @@ body {
 
     color: var(--text-color);
 
-    /*
-       Laranja na parte superior.
-    */
-
     border-top: 4px solid var(--primary-color);
 
     display: flex;
@@ -205,7 +232,9 @@ body {
     justify-content: center;
 }
 
+
 .card-setor:hover {
+
     transform: translateY(-5px);
 
     box-shadow:
@@ -228,7 +257,7 @@ body {
 
 
 /* =========================
-   TÍTULO DOS CARTÕES
+   TÍTULO DOS CARDS
 ========================= */
 
 .card-title {
@@ -239,16 +268,12 @@ body {
 
     margin-bottom: 5px;
 
-    /*
-       Verde institucional.
-    */
-
     color: var(--secondary-color);
 }
 
 
 /* =========================
-   DESCRIÇÃO
+   DESCRIÇÃO DOS CARDS
 ========================= */
 
 .card-desc {
@@ -279,6 +304,7 @@ body {
 
     border-bottom: 1px solid #dee2e6;
 }
+
 
 .cebdec-header h2 {
 
@@ -321,6 +347,7 @@ body {
     transition: background 0.3s ease;
 }
 
+
 .btn-voltar:hover {
 
     background-color: var(--primary-color);
@@ -340,6 +367,7 @@ body {
 
     gap: 15px;
 }
+
 
 .btn-subsetor {
 
@@ -366,6 +394,7 @@ body {
     transition: all 0.2s ease;
 }
 
+
 .btn-subsetor:hover {
 
     background-color: var(--primary-color);
@@ -375,12 +404,14 @@ body {
     border-color: var(--primary-color);
 }
 
+
 .btn-subsetor i {
 
     color: var(--primary-color);
 
     font-size: 1.2rem;
 }
+
 
 .btn-subsetor:hover i {
 
@@ -399,7 +430,7 @@ body {
     border-radius: var(--border-radius);
 
     /*
-       Menor que antes.
+       Calculadora mais compacta.
     */
 
     padding: 22px;
@@ -410,6 +441,7 @@ body {
 
     border-top: 4px solid var(--primary-color);
 }
+
 
 .calculadoras-section h2 {
 
@@ -424,7 +456,7 @@ body {
 
 
 /* =========================
-   GRID CALCULADORAS
+   GRID DAS CALCULADORAS
 ========================= */
 
 .calculadoras-grid {
@@ -439,7 +471,7 @@ body {
 
 
 /* =========================
-   CARD CALCULADORA
+   CARD DA CALCULADORA
 ========================= */
 
 .calc-card {
@@ -452,6 +484,7 @@ body {
 
     border: 1px solid #dee2e6;
 }
+
 
 .calc-card h3 {
 
@@ -472,6 +505,7 @@ body {
     margin-bottom: 12px;
 }
 
+
 .form-group label {
 
     display: block;
@@ -482,6 +516,7 @@ body {
 
     font-size: 0.85rem;
 }
+
 
 .form-group input {
 
@@ -521,6 +556,7 @@ body {
 
     transition: background 0.3s ease;
 }
+
 
 .btn-calc:hover {
 
@@ -569,10 +605,12 @@ body {
     margin-top: auto;
 }
 
+
 .info-contato p {
 
     margin: 5px 0;
 }
+
 
 .info-contato i {
 
@@ -597,6 +635,7 @@ footer {
     font-size: 0.85rem;
 }
 
+
 .footer-creditos {
 
     background-color: #111;
@@ -610,10 +649,12 @@ footer {
     border-top: 3px solid var(--primary-color);
 }
 
+
 .footer-content p {
 
     margin: 4px 0;
 }
+
 
 .footer-content .dev-by {
 
@@ -621,6 +662,7 @@ footer {
 
     color: #94a3b8;
 }
+
 
 .footer-content .dev-by strong {
 
@@ -640,6 +682,7 @@ footer {
 
     border-bottom: 1px solid #e9ecef;
 }
+
 
 .btn-inicio {
 
@@ -666,6 +709,7 @@ footer {
     transition: background-color 0.2s ease;
 }
 
+
 .btn-inicio:hover {
 
     background-color: #e56700;
@@ -673,7 +717,7 @@ footer {
 
 
 /* =========================
-   RESPONSIVIDADE
+   TABLETS
 ========================= */
 
 @media (max-width: 1100px) {
@@ -686,15 +730,30 @@ footer {
         gap: 15px;
     }
 
+
     .card-setor {
 
         min-height: 165px;
+    }
+
+
+    .banner-cogep {
+
+        padding-left: 30px;
+
+        padding-right: 30px;
+    }
+
+
+    .banner-cogep img {
+
+        max-height: 500px;
     }
 }
 
 
 /* =========================
-   TABLETS
+   CELULAR / TABLET PEQUENO
 ========================= */
 
 @media (max-width: 768px) {
@@ -711,8 +770,11 @@ footer {
 
     .banner-cogep {
 
-        padding: 0 10px;
+        padding-left: 10px;
+
+        padding-right: 10px;
     }
+
 
     .banner-cogep img {
 
@@ -723,6 +785,10 @@ footer {
         max-height: none;
 
         object-fit: contain;
+
+        padding-left: 8px;
+
+        padding-right: 8px;
     }
 
 
@@ -771,12 +837,25 @@ footer {
     }
 
 
+    .card-title {
+
+        font-size: 0.95rem;
+    }
+
+
+    .card-desc {
+
+        font-size: 0.75rem;
+    }
+
+
     /* Calculadoras */
 
     .calculadoras-section {
 
         padding: 18px 12px;
     }
+
 
     .calculadoras-grid {
 
@@ -810,7 +889,7 @@ footer {
 
 
 /* =========================
-   CELULAR
+   CELULAR PEQUENO
 ========================= */
 
 @media (max-width: 480px) {
@@ -823,15 +902,25 @@ footer {
     }
 
 
-    .banner-cogep {
-
-        padding: 0 5px;
-    }
-
-
     .card-setor {
 
         min-height: 145px;
+    }
+
+
+    .banner-cogep {
+
+        padding-left: 5px;
+
+        padding-right: 5px;
+    }
+
+
+    .banner-cogep img {
+
+        padding-left: 5px;
+
+        padding-right: 5px;
     }
 }
 
@@ -842,24 +931,49 @@ footer {
 
 @media (min-width: 1600px) {
 
+    .container {
+
+        max-width: 1450px;
+    }
+
+
+    /*
+       Branco nas extremidades.
+       Laranja apenas junto ao banner.
+    */
+
     .banner-cogep {
 
-        padding-left: 30px;
+        padding-left: 45px;
 
-        padding-right: 30px;
+        padding-right: 45px;
+
+        background-color: #ffffff;
     }
+
 
     .banner-cogep img {
 
         width: 100%;
 
-        max-height: 600px;
+        max-width: 1450px;
+
+        max-height: 620px;
 
         object-fit: contain;
+
+        object-position: center center;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
     }
 
 
     .grid-setores {
+
+        grid-template-columns:
+            repeat(5, 1fr);
 
         gap: 20px;
 
